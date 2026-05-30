@@ -1,0 +1,20 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<actions>
+    <action>
+        <actionName>run</actionName>
+        <packagings>
+            <packaging>jar</packaging>
+        </packagings>
+        <goals>
+            <goal>clean</goal>
+            <goal>javafx:run</goal>
+        </goals>
+        <properties>
+            <exec.vmArgs>--module-path "C:/path/to/javafx-sdk-25.0.2/lib" --add-modules javafx.controls,javafx.fxml</exec.vmArgs>
+            <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
+            <exec.appArgs/>
+            <exec.mainClass>com.realestateapp2.RealEstateApp2</exec.mainClass>
+            <exec.executable>java</exec.executable>
+        </properties>
+    </action>
+</actions>

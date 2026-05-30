@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/25"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.realestateapp2.controller.LoginController"
+           stylesheets="@style.css"
+           styleClass="root">
+
+    <VBox spacing="18" alignment="CENTER" styleClass="form-card">
+
+        <Label text="Real Estate Login"
+               styleClass="title-label"/>
+
+        <!-- Username & Password -->
+        <TextField fx:id="usernameField"
+                   promptText="Username"
+                   maxWidth="260"/>
+
+        <PasswordField fx:id="passwordField"
+                       promptText="Password"
+                       maxWidth="260"/>
+
+        <!-- Buttons -->
+        <HBox spacing="12" alignment="CENTER">
+            <Button text="Login"
+                    onAction="#handleLogin"
+                    prefWidth="120"
+                    styleClass="btn-primary"/>
+
+            <Button text="Register"
+                    onAction="#handleGoToRegister"
+                    prefWidth="120"
+                    styleClass="btn-success"/>
+        </HBox>
+
+        <!-- Info label -->
+        <Label text="Enter your credentials to continue."
+               styleClass="small-label"/>
+
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.realestateapp2.controller.AdminDashboardController"
+            stylesheets="@style.css"
+            styleClass="root">
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="header-bar">
+            <Label text="Admin Dashboard" styleClass="title-label"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="adminLabel" text="Admin: N/A" styleClass="small-label"/>
+            <Button text="Logout" onAction="#handleLogout" styleClass="btn-warning"/>
+        </HBox>
+    </top>
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox spacing="12" styleClass="sidebar">
+            <Label text="Manage" styleClass="sidebar-title"/>
+
+            <Button text="View All Users"
+                    onAction="#handleViewUsers"
+                    prefWidth="200"
+                    styleClass="btn-primary"/>
+
+            <Button text="Manage Properties"
+                    onAction="#handleManageProperties"
+                    prefWidth="200"
+                    styleClass="btn-primary"/>
+
+            <Button text="View Reports"
+                    onAction="#handleViewReports"
+                    prefWidth="200"
+                    styleClass="btn-primary"/>
+
+            <Button text="Maintenance Requests"
+                    onAction="#handleViewMaintenance"
+                    prefWidth="200"
+                    styleClass="btn-primary"/>
+        </VBox>
+    </left>
+
+    <!-- CENTER CONTENT -->
+    <center>
+        <VBox spacing="15" styleClass="content-pane">
+
+            <Label fx:id="centerLabel"
+                   text="Admin Panel"
+                   styleClass="section-title"/>
+
+            <TableView fx:id="adminTable" prefWidth="700" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="colName" text="Name" prefWidth="160"/>
+                    <TableColumn fx:id="colEmail" text="Email / Address" prefWidth="260"/>
+                    <TableColumn fx:id="colRole" text="Role / Status" prefWidth="160"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </center>
+
+    <!-- BOTTOM STATUS -->
+    <bottom>
+        <HBox alignment="CENTER_LEFT" styleClass="footer-bar">
+            <Label fx:id="statusLabel" text="Status: Ready" styleClass="small-label"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

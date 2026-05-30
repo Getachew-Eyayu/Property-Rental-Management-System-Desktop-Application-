@@ -1,0 +1,172 @@
+/* ===== ROOT BACKGROUND ===== */
+.root {
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, #4facfe, #00f2fe);
+}
+
+/* ===== FORM CARD (LOGIN / REGISTER BOX) ===== */
+.form-card {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-padding: 30;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 25, 0, 0, 10);
+}
+
+/* ===== TITLES ===== */
+.title-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* ===== HEADER BAR ===== */
+.header-bar {
+    -fx-background-color: white;
+    -fx-padding: 12;
+    -fx-background-radius: 0 0 15 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 12, 0, 0, 5);
+}
+
+/* ===== TEXT FIELDS ===== */
+.text-field, .password-field {
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #dcdde1;
+    -fx-padding: 10;
+    -fx-background-color: white;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4facfe;
+    -fx-effect: dropshadow(three-pass-box, rgba(79,172,254,0.4), 10, 0, 0, 0);
+}
+
+/* ===== LIST VIEW ===== */
+.list-view {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.list-cell {
+    -fx-padding: 12;
+    -fx-border-color: transparent transparent #ecf0f1 transparent;
+}
+
+.list-cell:selected {
+    -fx-background-color: #4facfe;
+    -fx-text-fill: white;
+}
+
+/* ===== GENERAL BUTTON ===== */
+.button {
+    -fx-background-radius: 25;
+    -fx-padding: 10 22;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.btn-primary {
+    -fx-background-color: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to right, #3b8dff, #00d2ff);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* ===== SUCCESS BUTTON ===== */
+.btn-success {
+    -fx-background-color: linear-gradient(to right, #2ecc71, #27ae60);
+}
+
+.btn-success:hover {
+    -fx-background-color: linear-gradient(to right, #27ae60, #1e8449);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* ===== WARNING BUTTON ===== */
+.btn-warning {
+    -fx-background-color: linear-gradient(to right, #f39c12, #e67e22);
+}
+
+.btn-warning:hover {
+    -fx-background-color: linear-gradient(to right, #d68910, #ca6f1e);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* ===== FILTER / SIDE PANES ===== */
+.filter-pane {
+    -fx-padding: 15;
+    -fx-background-color: rgba(255,255,255,0.8);
+    -fx-background-radius: 15;
+}
+
+/* ===== HYPERLINKS ===== */
+.hyperlink {
+    -fx-text-fill: #4facfe;
+    -fx-border-color: transparent;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}
+
+/* ===== SMALL LABELS ===== */
+.small-label {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 12px;
+}
+.sidebar {
+    -fx-padding: 20;
+    -fx-background-color: #2c3e50;
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+.content-pane {
+    -fx-padding: 20;
+    -fx-background-color: rgba(255,255,255,0.9);
+    -fx-background-radius: 15;
+}
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+.footer-bar {
+    -fx-padding: 10;
+    -fx-background-color: white;
+}
+.table-view {
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4facfe;
+}
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.content-pane {
+    -fx-padding: 20;
+    -fx-background-color: rgba(255,255,255,0.9);
+    -fx-background-radius: 15;
+}
+
+.footer-bar {
+    -fx-padding: 10;
+    -fx-background-color: white;
+}

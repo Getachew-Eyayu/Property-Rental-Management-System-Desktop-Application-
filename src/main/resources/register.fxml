@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/25"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.realestateapp2.controller.RegisterController"
+           stylesheets="@style.css"
+           styleClass="root">
+
+    <VBox spacing="15" alignment="CENTER" styleClass="form-card">
+
+        <Label text="Create Account" styleClass="title-label"/>
+
+        <TextField fx:id="usernameField"
+                   promptText="Username"
+                   maxWidth="260"/>
+
+        <PasswordField fx:id="passwordField"
+                       promptText="Password"
+                       maxWidth="260"/>
+
+        <PasswordField fx:id="confirmPasswordField"
+                       promptText="Confirm Password"
+                       maxWidth="260"/>
+
+        <Button text="Register"
+                onAction="#handleRegister"
+                prefWidth="180"
+                styleClass="btn-success"/>
+
+        <Button text="Back to Login"
+                onAction="#handleGoToLogin"
+                prefWidth="180"
+                styleClass="btn-primary"/>
+
+    </VBox>
+
+</StackPane>

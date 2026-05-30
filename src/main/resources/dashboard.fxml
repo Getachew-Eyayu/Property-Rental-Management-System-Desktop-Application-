@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.realestateapp2.controller.DashboardController"
+            stylesheets="@style.css"
+            styleClass="root">
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="header-bar">
+            <Label text="Dashboard" styleClass="title-label"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="userLabel" text="User: N/A" styleClass="small-label"/>
+            <Button text="Logout" onAction="#handleLogout" styleClass="btn-warning"/>
+        </HBox>
+    </top>
+
+    <!-- LEFT FILTER PANEL -->
+    <left>
+        <VBox spacing="12" styleClass="filter-pane">
+
+            <Label text="Filter Properties" styleClass="section-title"/>
+
+            <Label text="Type:"/>
+            <ComboBox fx:id="typeFilter" prefWidth="170"/>
+
+            <Label text="Min Price:"/>
+            <TextField fx:id="minPriceField" promptText="0"/>
+
+            <Label text="Max Price:"/>
+            <TextField fx:id="maxPriceField" promptText="Any"/>
+
+            <Button text="Search"
+                    onAction="#handleSearch"
+                    prefWidth="170"
+                    styleClass="btn-primary"/>
+        </VBox>
+    </left>
+
+    <!-- CENTER PROPERTY LIST -->
+    <center>
+        <VBox spacing="15" styleClass="content-pane">
+            <Label text="Available Properties" styleClass="section-title"/>
+            <ListView fx:id="propertyList" prefWidth="550" prefHeight="420"/>
+        </VBox>
+    </center>
+
+    <!-- BOTTOM ACTION BAR -->
+    <bottom>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="footer-bar">
+            <Button text="Rent Selected Property"
+                    onAction="#handleRent"
+                    styleClass="btn-success"/>
+
+            <Button text="Submit Maintenance Request"
+                    onAction="#handleSubmitMaintenance"
+                    styleClass="btn-primary"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="statusLabel" text="Status: Ready" styleClass="small-label"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
